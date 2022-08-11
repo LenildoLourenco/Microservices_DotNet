@@ -1,5 +1,6 @@
 ﻿using MiniLojaVirtual.ProductApi.Models;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace MiniLojaVirtual.ProductApi.Dtos;
 
@@ -25,6 +26,7 @@ public class ProductDto
     public long Stock { get; set; }
     public string? ImageURL { get; set; }
 
+    [JsonIgnore]
     public Category? Category { get; set; }
     public int CategoryId { get; set; }
 }
